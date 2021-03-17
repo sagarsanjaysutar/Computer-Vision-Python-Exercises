@@ -1,0 +1,8 @@
+numpy
+scikit-build
+scikit-learn
+opencv-python
+keras
+scikit-image
+imutils
+
