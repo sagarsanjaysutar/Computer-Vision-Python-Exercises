@@ -1,10 +1,7 @@
 import cv2
 import numpy as np
 
-
-img1_path = ".\\Images\\sample (3).jpg"
-
-c = cv2.imread(img1_path, cv2.IMREAD_GRAYSCALE)
+    c = cv2.imread("/Datasets/Training/Cars/sample (6).jpg", cv2.IMREAD_GRAYSCALE)
 c = cv2.resize(c, None, fx=0.5, fy=0.5)
 cv2.imshow("Original", c)
 

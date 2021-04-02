@@ -14,7 +14,7 @@ labels = mnist.target
 LR_classifier = LogisticRegression(C=0.01, penalty='l2', tol=0.01)
 LR_classifier.fit(images[: int((data_size / 4) * 3)], labels[: int((data_size / 4) * 3)])
 
-sample_img = io.imread("./Images/nine.png")
+sample_img = io.imread("/Datasets/Training/Digits/nine.jpg")
 sample_img = color.rgb2gray(sample_img)
 sample_img = transform.resize(sample_img, (8, 8), mode="wrap")
 sample_edge = feature.canny(sample_img, sigma=5)

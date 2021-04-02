@@ -1,6 +1,6 @@
 import cv2
 
-img = cv2.imread("./Images/sample (1).jpg")
+img = cv2.imread("/Datasets/Training/Cats/sample (1).jpg")
 img = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
 dim = "Width " + str(img.shape[1]) + " Height " + str(img.shape[0])
 cv2.putText(img, dim, (10, 50), cv2.FONT_HERSHEY_COMPLEX, 1, (0, 0, 0), 2, cv2.LINE_4)
