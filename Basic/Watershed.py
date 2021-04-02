@@ -4,7 +4,7 @@ import numpy as np
 kernel = np.ones((3, 3), np.uint8)
 colors = np.int32(list(np.ndindex(2, 2, 2))) * 255
 
-img = cv2.imread("/Datasets/Training/Cars/sample (6).jpg")
+img = cv2.imread("../Datasets/Training/Cars/sample (6).jpg")
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 blur = cv2.GaussianBlur(gray, (3, 3), 0)
 

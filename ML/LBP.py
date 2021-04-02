@@ -6,8 +6,8 @@ import cv2
 import os
 
 imageInfo = {
-    "training": "/Datasets/Training",
-    "testing": "/Datasets/Testing"
+    "training": "../Datasets/Training",
+    "testing": "../Datasets/Testing"
 }
 data = []
 labels = []

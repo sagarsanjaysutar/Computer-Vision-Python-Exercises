@@ -1,10 +1,10 @@
 import cv2
 import numpy as np
 gray, blur, edge, contours, cont_img = list(), list(), list(), list(), list()
-img = [cv2.imread("/Datasets/Training/Keyboard/keyboard (1).jpg"),
-       cv2.imread("/Datasets/Training/Keyboard/keyboard (2).jpg"),
-       cv2.imread("/Datasets/Training/Keyboard/keyboard (3).jpg"),
-       cv2.imread("/Datasets/Training/Keyboard/keyboard (4).jpg")
+img = [cv2.imread("../Datasets/Training/Keyboard/keyboard (1).jpg"),
+       cv2.imread("../Datasets/Training/Dogs/sample (2).jpg"),
+       cv2.imread("../Datasets/Training/Cars/sample (6).jpg"),
+       cv2.imread("../Datasets/Training/Cars/sample (7).png"),
     ]
 for i in range(len(img)):
     gray.append(cv2.cvtColor(img[i], cv2.COLOR_BGR2GRAY))
