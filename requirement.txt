@@ -1,9 +1,8 @@
-numpy==1.19.2
-h5py==2.9.0
+numpy
 scikit-build
 scikit-learn
 opencv-python
 keras
 scikit-image
 imutils
-tensorflow
+tensorflow==2.2
