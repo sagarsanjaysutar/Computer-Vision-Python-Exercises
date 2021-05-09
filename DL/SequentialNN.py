@@ -16,6 +16,9 @@ import matplotlib.pyplot as plt
 # We are testing out a drug on people between the age 18-80. It's been observed that mostly people below 50, 
 # don't experience side effect but people above 50 do. 
 
+# O/P of this script is a 2*2 list. Interpret it as rows and column with titles "Not affected", "Affected".
+# or visit this link https://youtu.be/VYGVOwlT4oE?list=PLZbbT5o_s2xrwRnXk_yCPtnqqo4_u2YGL&t=170
+
 train_samples, train_labels, test_samples, test_labels, scaled_train_samples, scaled_test_samples = [], [], [], [], [], []
 
 
@@ -101,3 +104,4 @@ predictions = model.predict(scaled_test_samples, batch_size=10, verbose=0)
 rounded_predictions = np.argmax(predictions, axis= -1) # To select the most probable predicitons i.e. the one with high value. It's 1's and 0's i.e. affected or not affected
 cm = confusion_matrix(y_true=test_labels, y_pred=rounded_predictions)
 plot_confusion_matrix(cm=cm, classes=['Not affected', 'Affected'],title="Confusion matrix")
+
