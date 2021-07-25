@@ -1,19 +1,22 @@
+import glob
+import itertools
+import os
+import random
+import shutil
+import warnings
+
+import matplotlib.pyplot as plt
 import numpy as np
 import tensorflow as tf
-from tensorflow import keras
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Activation, Dense, Flatten, BatchNormalization, Conv2D, MaxPool2D
-from tensorflow.keras.optimizers import Adam
-from tensorflow.keras.metrics import categorical_crossentropy
-from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from sklearn.metrics import confusion_matrix
-import os
-import shutil
-import random
-import glob
-import matplotlib.pyplot as plt
-import warnings
-import itertools
+from tensorflow import keras
+from tensorflow.keras.layers import (Activation, BatchNormalization, Conv2D,
+                                     Dense, Flatten, MaxPool2D)
+from tensorflow.keras.metrics import categorical_crossentropy
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.optimizers import Adam
+from tensorflow.keras.preprocessing.image import ImageDataGenerator
+
 warnings.simplefilter(action = 'ignore', category=FutureWarning)
 
 # Cat vs Dog classifier. We use the kaggle datasets, preprocess it, organise it and then make batches of data to use it further.
@@ -102,6 +105,8 @@ prediction = model.predict(x=test_batches, verbose=0)
 # print(test_batches.class_indices) ==> {'cat': 0, 'dog': 1}
 # test_batches.classes are labels (0's and 1's)
 cm = confusion_matrix(y_true = test_batches.classes, y_pred = np.argmax(prediction, axis=-1))
+# import seaborn as sns
+# sns.heatmap(cm, annot = True)
 plot_confusion_matrix(cm=cm, classes=['cat', 'dog'], title='Confusion matrix')
 
 
