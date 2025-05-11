@@ -1,3 +1,9 @@
+'''
+Image Segmentation with Watershed Algorithm
+
+Refer: https://docs.opencv.org/4.x/d3/db4/tutorial_py_watershed.html 
+'''
+
 import cv2
 import numpy as np
 
